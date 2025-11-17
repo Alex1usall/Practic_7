@@ -18,7 +18,7 @@ public class Завдання5 {
             System.out.println(a[i]);
         }
 
-        System.out.println("Напиши в порядок на который проверить массив (Возростание / Убывание)");
+        System.out.println("Напиши в порядок на который проверить массив (Возрастание / Убывание)");
         String choose = sc.next();
 
         sc.nextLine();
