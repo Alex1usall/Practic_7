@@ -1,47 +1,40 @@
-
-
-/*Не работает!
- Проэкт закрыт до лучших годов 😵
-
-
-
-
-
 package org.college.ap.practice6;
 
-import java.security.SecureRandom;
+import java.util.Scanner;
+
 public class Завдання2 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        SecureRandom sr = new SecureRandom();
+        System.out.println("Напиши количество углов в многоугольнике");
 
-        int n =  sr.nextInt(8) + 3;
+        int n = sc.nextInt();
+        int[] x = new int[n];
 
-        int [] x = new int [n];
-
-        System.out.println("Количество углов: " + n);
-        System.out.println("Углы многоугольника: ");
+        System.out.println("Введите углы многоугольника:");
 
         for (int i = 0; i < n; i++) {
-            x[i] = sr.nextInt(161) + 10;
-            System.out.print(x[i]);
+            System.out.print("Угол " + (i + 1) + ": ");
+            x[i] = sc.nextInt();
         }
 
-        boolean c = c(x);
-
-        System.out.println("Массив: ");
-        for (int a : x){
-            System.out.print(a);
+        int sum = 0;
+        for (int i = 0; i < n; i++) {  // <---- исправлено
+            sum += x[i];
         }
 
-        for (int b : x){
-            if
+        int formul = 180 * (n - 2);
+
+        System.out.println("Сумма углов = " + sum);
+        System.out.println("По формуле 180*(n-2) = " + formul);
+
+        if (sum == formul) {
+            System.out.println("Такой многоугольник МОЖЕТ существовать.");
+        } else {
+            System.out.println("Такой многоугольник НЕ может существовать.");
         }
 
-
-
-
-
+        sc.close();
     }
-}*/
+}
