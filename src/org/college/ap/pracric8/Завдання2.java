@@ -5,7 +5,7 @@ public class Завдання2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ведите любую строку:");
+        System.out.println("Введите любую строку:");
 
         String input = sc.nextLine();
         String rT = "";
